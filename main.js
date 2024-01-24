@@ -20,8 +20,8 @@ function openWindow(url){
 }
 
 document.getElementById("LULZ").addEventListener('click', e => {
-  openWindow(popup.html)
-  openWindow(popup.html)
+  openWindow('popup.html')
+  openWindow('popup.html')
   document.getElementById("LULZ").click()
   
 })
