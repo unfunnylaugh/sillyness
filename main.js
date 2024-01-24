@@ -24,6 +24,7 @@ function openWindow(url){
 document.getElementById("LULZ").addEventListener('click', e => {
   openWindow('popup.html')
   openWindow('popup.html')
+  focusWindows()
   document.getElementById("LULZ").click()
   
 })
