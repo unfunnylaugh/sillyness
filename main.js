@@ -16,7 +16,7 @@ blockBackButton()
 fillHistory()
 
 document.getElementById("LULZ").addEventListener('click', e => {
-  window.open("popup.html","","left=100,top=100,width=220,height=240");
+  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
   document.getElementById("LULZ").remove();
   setInterval(function(){
     window.open("popup.html","","left=100,top=100,width=220,height=240");
