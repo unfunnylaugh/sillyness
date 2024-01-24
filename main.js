@@ -15,13 +15,13 @@ function fillHistory () {
 blockBackButton()
 fillHistory()
 
+function openWindow(url){
+        aWindow = window.open(url,"_blank", 'menubar=no,status=no,toolbar=noresizable=no,width=220,height=240,titlebar=no,alwaysRaised=yes');
+}
+
 document.getElementById("LULZ").addEventListener('click', e => {
-  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
-  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
-  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
-  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
-  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
-  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
-  document.getElementById("LULZ").remove();
+  openWindow(popup.html)
+  openWindow(popup.html)
+  document.getElementById("LULZ").click()
   
 })
