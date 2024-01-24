@@ -12,8 +12,10 @@ function fillHistory () {
   window.history.pushState({}, '', window.location.pathname)
 }
 
+confirmPageUnload()
 blockBackButton()
 fillHistory()
+focusWindows()
 
 function openWindow(url){
         aWindow = window.open(url,"_blank", 'menubar=no,status=no,toolbar=noresizable=no,width=220,height=240,titlebar=no,alwaysRaised=yes');
