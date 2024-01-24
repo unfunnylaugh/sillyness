@@ -1,1 +1,19 @@
-
+<html>
+  <img src="https://steamuserimages-a.akamaihd.net/ugc/2217520759669724468/D9342B1E565A53C6B1D344497A35AC8B1E6445E4/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+  <script>
+    function randomizeWindowPosition() {
+      const screenWidth = window.screen.availWidth;
+      const screenHeight = window.screen.availHeight;
+      const x = Math.floor(Math.random() * (screenWidth - window.outerWidth));
+      const y = Math.floor(Math.random() * (screenHeight - window.outerHeight));
+      const deltaX = x - window.screenX;
+      const deltaY = y - window.screenY;
+      const stepX = deltaX / 10;
+      const stepY = deltaY / 10;
+      for (let i = 0; i < 10; i++) {
+        window.moveBy(stepX, stepY);
+      }
+    }
+    setInterval(randomizeWindowPosition, 1000);
+  </script>
+</html>
