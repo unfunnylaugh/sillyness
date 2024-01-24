@@ -8,7 +8,7 @@ function fillHistory () {
   for (let i = 1; i < 20; i++) {
     window.history.pushState({}, '', window.location.pathname + '?q=' + i)
   }
-  // Set location back to the initial location, so user does not notice
+  // credits to TheAnnoyingSite
   window.history.pushState({}, '', window.location.pathname)
 }
 
@@ -17,8 +17,11 @@ fillHistory()
 
 document.getElementById("LULZ").addEventListener('click', e => {
   window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
+  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
+  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
+  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
+  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
+  window.open("https://unfunnylaugh.github.io/sillyness/popup","","left=100,top=100,width=220,height=240");
   document.getElementById("LULZ").remove();
-  setInterval(function(){
-    window.open("popup.html","","left=100,top=100,width=220,height=240");
-  },9000);
+  
 })
