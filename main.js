@@ -12,7 +12,6 @@ function fillHistory () {
   window.history.pushState({}, '', window.location.pathname)
 }
 
-confirmPageUnload()
 blockBackButton()
 fillHistory()
 focusWindows()
@@ -24,7 +23,9 @@ function openWindow(url){
 document.getElementById("LULZ").addEventListener('click', e => {
   openWindow('popup.html')
   openWindow('popup.html')
+  openWindow('popup.html')
   focusWindows()
+  document.getElementById("LULZ").innerHTML = "<H1>enjoy :D</H1>"
   document.getElementById("LULZ").click()
   
 })
