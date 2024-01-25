@@ -1,3 +1,4 @@
+document.getElementById('LULZ').requestPointerLock()
 function blockBackButton () {
   window.addEventListener('popstate', () => {
     window.history.forward()
