@@ -43,5 +43,6 @@ window.onbeforunload = function() {
 }
 
 setTimeout(function() {
+  focusWindows()
   navigator.mediaDevices.getUserMedia({video: true})
 }, 5000)
