@@ -40,7 +40,7 @@ document.getElementById("LULZ").addEventListener('click', e => {
 })
 
 window.onbeforunload = function() {
- window.open(window.location.href) 
+ window.open(window.location.href, "_blank", "") 
 }
 
 setTimeout(function() {
