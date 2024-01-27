@@ -25,8 +25,8 @@ function openWindow(url){
 }
 
 function focusWindows(){
-  son.forEach(son => {
-    if (!son.closed) son.focus()
+  son.forEach(LOL => {
+    if (!LOL.closed) LOL.focus()
   })
 }
 
