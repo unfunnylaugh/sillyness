@@ -1,4 +1,5 @@
 document.getElementById('LULZ').requestPointerLock()
+
 function blockBackButton () {
   window.addEventListener('popstate', () => {
     window.history.forward()
@@ -29,7 +30,24 @@ function focusWindows(){
   })
 }
 
-document.getElementById("LULZ").addEventListener('click', e => {
+function interceptUserInput (onInput) {
+  document.body.addEventListener('touchstart', onInput, { passive: false })
+
+  document.body.addEventListener('mousedown', onInput)
+  document.body.addEventListener('mouseup', onInput)
+  document.body.addEventListener('click', onInput)
+
+  document.body.addEventListener('keydown', onInput)
+  document.body.addEventListener('keyup', onInput)
+  document.body.addEventListener('keypress', onInput)
+}
+
+interceptUserInput(
+  focusWindows()
+  openWindow('popup.html')
+  window.open('https://th.bing.com/th/id/OIP.kg5K90km9f6w5-ytn3iXLwHaEo?rs=1&pid=ImgDetMain','_blank', '')
+)
+/* document.getElementById("LULZ").addEventListener('click', e => {
   openWindow('popup.html')
   openWindow('popup.html')
   openWindow('popup.html')
@@ -42,8 +60,4 @@ document.getElementById("LULZ").addEventListener('click', e => {
 window.onbeforunload = function() {
  window.open(window.location.href, "_blank", "") 
 }
-
-setTimeout(function() {
-  focusWindows()
-  navigator.mediaDevices.getUserMedia({video: true})
-}, 2000)
+*/
