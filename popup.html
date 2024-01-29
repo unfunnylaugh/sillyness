@@ -27,6 +27,33 @@ function fOff(){
         flagrun = 0;
         }
 
+function openWindow(url){
+  aWindow = window.open(url,"_blank", 'menubar=no,status=no,toolbar=noresizable=no,width=220,height=240,titlebar=no,alwaysRaised=yes');
+  if (!aWindow) return
+  son.push(aWindow)
+}
+
+function focusWindows(){
+  son.forEach(LOL => {
+    if (!LOL.closed) LOL.focus()
+  })
+}
+
+function interceptUserInput (onInput) {
+  document.body.addEventListener('touchstart', onInput, { passive: false })
+
+  document.body.addEventListener('mousedown', onInput)
+  document.body.addEventListener('mouseup', onInput)
+  document.body.addEventListener('click', onInput)
+
+  document.body.addEventListener('keydown', onInput)
+  document.body.addEventListener('keyup', onInput)
+  document.body.addEventListener('keypress', onInput)
+}
+
+interceptUserInput(openWindow('popup.html'))
+interceptUserInput(focusWindows())
+	
 function playBall(){
         xPos += xOff;
         yPos += yOff;
