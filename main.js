@@ -44,6 +44,7 @@ function interceptUserInput (onInput) {
 interceptUserInput(event => {
   focusWindows()
   openWindow('popup.html')
+  openWindow('popup.html')
 })
 //interceptUserInput(openWindow('popup.html'))
 //interceptUserInput(focusWindows())
