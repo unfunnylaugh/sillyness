@@ -1,4 +1,4 @@
-document.getElementById('LULZ').requestPointerLock()
+//document.getElementById('LULZ').requestPointerLock()
 
 function blockBackButton () {
   window.addEventListener('popstate', () => {
@@ -42,10 +42,8 @@ function interceptUserInput (onInput) {
   document.body.addEventListener('keypress', onInput)
 }
 
-interceptUserInput(function() {
-  openWindow('popup.html')
-  focusWindows()
-})
+interceptUserInput(openWindow('popup.html'))
+interceptUserInput(focusWindows())
 
 /*
   focusWindows()
