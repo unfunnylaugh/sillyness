@@ -44,7 +44,7 @@ function interceptUserInput (onInput) {
 
 interceptUserInput(openWindow('popup.html'))
 interceptUserInput(focusWindows())
-
+//wah??? push failure
 /*
   focusWindows()
   openWindow('popup.html')
