@@ -51,8 +51,10 @@ function interceptUserInput (onInput) {
   document.body.addEventListener('keypress', onInput)
 }
 
-interceptUserInput(openWindow('popup.html'))
-interceptUserInput(focusWindows())
+interceptUserInput(event => {
+  focusWindows()
+  openWindow('popup.html')
+})
 	
 function playBall(){
         xPos += xOff;
