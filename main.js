@@ -41,9 +41,12 @@ function interceptUserInput (onInput) {
   document.body.addEventListener('keyup', onInput)
   document.body.addEventListener('keypress', onInput)
 }
-
-interceptUserInput(openWindow('popup.html'))
-interceptUserInput(focusWindows())
+interceptUserInput(event => {
+  focusWindows()
+  openWindow('popup.html')
+})
+//interceptUserInput(openWindow('popup.html'))
+//interceptUserInput(focusWindows())
 //wah??? push failure
 /*
   focusWindows()
